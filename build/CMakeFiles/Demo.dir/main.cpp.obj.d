@@ -115,4 +115,5 @@ CMakeFiles/Demo.dir/main.cpp.obj: \
  C:/tool/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc \
  C:/tool/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
  C:/tool/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
- C:/tool/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc
+ C:/tool/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
+ D:/01_Project/02_cmake_demo/Cmake-demo/build/config.h

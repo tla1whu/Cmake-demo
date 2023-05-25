@@ -245,6 +245,9 @@ CMAKE_STRIP:FILEPATH=C:/tool/mingw64/bin/strip.exe
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//output date
+DATE_ENABLE:BOOL=ON
+
 //Value Computed by CMake
 Demo_BINARY_DIR:STATIC=D:/01_Project/02_cmake_demo/Cmake-demo/build
 

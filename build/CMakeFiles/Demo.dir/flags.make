@@ -4,7 +4,7 @@
 # compile CXX with C:/tool/mingw64/bin/g++.exe
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = @CMakeFiles/Demo.dir/includes_CXX.rsp
 
 CXX_FLAGS = 
 
