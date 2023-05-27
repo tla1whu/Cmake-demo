@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "../lib/libaddition.a"
+  "../lib/libaddition.pdb"
   "CMakeFiles/addition.dir/addition.cpp.obj"
   "CMakeFiles/addition.dir/addition.cpp.obj.d"
-  "libaddition.a"
-  "libaddition.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

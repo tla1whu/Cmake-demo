@@ -129,6 +129,20 @@ addition/fast:
 	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/build
 .PHONY : addition/fast
 
+# Convenience name for target.
+calc/CMakeFiles/subtract.dir/rule:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 calc/CMakeFiles/subtract.dir/rule
+.PHONY : calc/CMakeFiles/subtract.dir/rule
+
+# Convenience name for target.
+subtract: calc/CMakeFiles/subtract.dir/rule
+.PHONY : subtract
+
+# fast build rule for target.
+subtract/fast:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/build
+.PHONY : subtract/fast
+
 addition.obj: addition.cpp.obj
 .PHONY : addition.obj
 
@@ -153,6 +167,30 @@ addition.cpp.s:
 	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/addition.cpp.s
 .PHONY : addition.cpp.s
 
+subtract.obj: subtract.cpp.obj
+.PHONY : subtract.obj
+
+# target to build an object file
+subtract.cpp.obj:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/subtract.cpp.obj
+.PHONY : subtract.cpp.obj
+
+subtract.i: subtract.cpp.i
+.PHONY : subtract.i
+
+# target to preprocess a source file
+subtract.cpp.i:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/subtract.cpp.i
+.PHONY : subtract.cpp.i
+
+subtract.s: subtract.cpp.s
+.PHONY : subtract.s
+
+# target to generate assembly for a file
+subtract.cpp.s:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/subtract.cpp.s
+.PHONY : subtract.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -162,9 +200,13 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... addition
+	@echo ... subtract
 	@echo ... addition.obj
 	@echo ... addition.i
 	@echo ... addition.s
+	@echo ... subtract.obj
+	@echo ... subtract.i
+	@echo ... subtract.s
 .PHONY : help
 
 

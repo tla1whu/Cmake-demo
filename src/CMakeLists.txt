@@ -4,6 +4,8 @@ set(CMAKE_C_COMPILER "gcc")
 set(CMAKE_CXX_COMPILER "g++")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+#set the library path
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 #set the project name
 project(Demo VERSION 1.0)
@@ -21,9 +23,9 @@ add_subdirectory(calc) #when run into this case, it will jump into calc's cmakel
 add_executable(Demo main.cpp)
 
 target_link_libraries(Demo PUBLIC addition)
-
+target_link_libraries(Demo PUBLIC subtract)
 
 target_include_directories(Demo PUBLIC 
-                            "${PROJECT_BINARY_DIR}"
-                            "${PROJECT_SOURCE_DIR}/calc"
+                            ${PROJECT_BINARY_DIR}
+                            ${PROJECT_SOURCE_DIR}/calc
                             )

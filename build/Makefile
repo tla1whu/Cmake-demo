@@ -141,6 +141,19 @@ addition/fast:
 	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/build
 .PHONY : addition/fast
 
+#=============================================================================
+# Target rules for targets named subtract
+
+# Build rule for target.
+subtract: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 subtract
+.PHONY : subtract
+
+# fast build rule for target.
+subtract/fast:
+	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/build
+.PHONY : subtract/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -175,6 +188,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Demo
 	@echo ... addition
+	@echo ... subtract
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -2,6 +2,7 @@
 #include "iostream"
 #include "config.h"
 #include "addition.h"
+#include "subtract.h"
 
 int main()
 {
@@ -12,6 +13,7 @@ int main()
 #endif
 	
 	printf("add: 1+2=%d\n", add(1,2));
+	printf("subtract: 3-2=%d\n", subtract(3,2));
 
 	system("pause");
 	return 0;
