@@ -63,15 +63,32 @@ CMAKE_BINARY_DIR = D:\01_Project\02_cmake_demo\Cmake-demo\build
 
 # The main recursive "all" target.
 all: CMakeFiles/Demo.dir/all
+all: calc/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: calc/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Demo.dir/clean
+clean: calc/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory calc
+
+# Recursive "all" directory target.
+calc/all: calc/CMakeFiles/addition.dir/all
+.PHONY : calc/all
+
+# Recursive "preinstall" directory target.
+calc/preinstall:
+.PHONY : calc/preinstall
+
+# Recursive "clean" directory target.
+calc/clean: calc/CMakeFiles/addition.dir/clean
+.PHONY : calc/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Demo.dir
@@ -98,6 +115,32 @@ Demo: CMakeFiles/Demo.dir/rule
 CMakeFiles/Demo.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/clean
 .PHONY : CMakeFiles/Demo.dir/clean
+
+#=============================================================================
+# Target rules for target calc/CMakeFiles/addition.dir
+
+# All Build rule for target.
+calc/CMakeFiles/addition.dir/all:
+	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/depend
+	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=3,4 "Built target addition"
+.PHONY : calc/CMakeFiles/addition.dir/all
+
+# Build rule for subdir invocation for target.
+calc/CMakeFiles/addition.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 calc/CMakeFiles/addition.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 0
+.PHONY : calc/CMakeFiles/addition.dir/rule
+
+# Convenience name for target.
+addition: calc/CMakeFiles/addition.dir/rule
+.PHONY : addition
+
+# clean rule for target.
+calc/CMakeFiles/addition.dir/clean:
+	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/clean
+.PHONY : calc/CMakeFiles/addition.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -33,6 +33,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.25.3/CMakeRCCompiler.cmake"
   "CMakeFiles/3.25.3/CMakeSystem.cmake"
   "D:/01_Project/02_cmake_demo/Cmake-demo/src/CMakeLists.txt"
+  "D:/01_Project/02_cmake_demo/Cmake-demo/src/calc/CMakeLists.txt"
   "D:/01_Project/02_cmake_demo/Cmake-demo/tool/template/config.h.in"
   )
 
@@ -46,9 +47,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "config.h"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "calc/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Demo.dir/DependInfo.cmake"
+  "calc/CMakeFiles/addition.dir/DependInfo.cmake"
   )
