@@ -18,7 +18,12 @@ configure_file(../tool/template/config.h.in config.h)
 #add subdirectory
 add_subdirectory(calc) #when run into this case, it will jump into calc's cmakelists.txt
 
-
 add_executable(Demo main.cpp)
 
-target_include_directories(Demo PUBLIC "${PROJECT_BINARY_DIR}")
+target_link_libraries(Demo PUBLIC addition)
+
+
+target_include_directories(Demo PUBLIC 
+                            "${PROJECT_BINARY_DIR}"
+                            "${PROJECT_SOURCE_DIR}/calc"
+                            )

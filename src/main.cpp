@@ -1,6 +1,7 @@
 #include "stdio.h"
 #include "iostream"
 #include "config.h"
+#include "addition.h"
 
 int main()
 {
@@ -10,6 +11,8 @@ int main()
 	printf("date %s\n", DATE);
 #endif
 	
+	printf("add: 1+2=%d\n", add(1,2));
+
 	system("pause");
 	return 0;
 }

@@ -92,6 +92,7 @@ Demo_EXTERNAL_OBJECTS =
 
 bin/Demo.exe: CMakeFiles/Demo.dir/main.cpp.obj
 bin/Demo.exe: CMakeFiles/Demo.dir/build.make
+bin/Demo.exe: calc/libaddition.a
 bin/Demo.exe: CMakeFiles/Demo.dir/linkLibs.rsp
 bin/Demo.exe: CMakeFiles/Demo.dir/objects1
 bin/Demo.exe: CMakeFiles/Demo.dir/link.txt
