@@ -23,7 +23,7 @@ configure_file(../tool/template/config.h.in config.h)
 add_subdirectory(calc) #when run into this case, it will jump into calc's cmakelists.txt
 add_subdirectory(app)
 
-add_executable(Demo main.c)
+add_executable(Demo main.cpp)
 
 target_link_libraries(Demo PUBLIC 
     addition
