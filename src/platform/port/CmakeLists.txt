@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+
+add_library(port STATIC
+    port.c
+    port.h
+)
+
+target_include_directories(port PUBLIC ../common)

@@ -1,0 +1,2 @@
+C:\tool\mingw64\bin\ar.exe qc libapp2.a CMakeFiles/app2.dir/app2.c.obj CMakeFiles/app2.dir/app_test2.c.obj
+C:\tool\mingw64\bin\ranlib.exe libapp2.a

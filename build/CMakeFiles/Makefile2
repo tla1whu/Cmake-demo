@@ -62,159 +62,250 @@ CMAKE_BINARY_DIR = D:\01_Project\02_cmake_demo\Cmake-demo\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Demo.dir/all
-all: calc/all
+all: CMakeFiles/main.dir/all
 all: app/all
+all: platform/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: calc/preinstall
 preinstall: app/preinstall
+preinstall: platform/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Demo.dir/clean
-clean: calc/clean
+clean: CMakeFiles/main.dir/clean
 clean: app/clean
+clean: platform/clean
 .PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory app
 
 # Recursive "all" directory target.
-app/all: app/CMakeFiles/applib.dir/all
+app/all: app/App1/all
+app/all: app/App2/all
 .PHONY : app/all
 
 # Recursive "preinstall" directory target.
-app/preinstall:
+app/preinstall: app/App1/preinstall
+app/preinstall: app/App2/preinstall
 .PHONY : app/preinstall
 
 # Recursive "clean" directory target.
-app/clean: app/CMakeFiles/applib.dir/clean
+app/clean: app/App1/clean
+app/clean: app/App2/clean
 .PHONY : app/clean
 
 #=============================================================================
-# Directory level rules for directory calc
+# Directory level rules for directory app/App1
 
 # Recursive "all" directory target.
-calc/all: calc/CMakeFiles/addition.dir/all
-calc/all: calc/CMakeFiles/subtract.dir/all
-.PHONY : calc/all
+app/App1/all: app/App1/CMakeFiles/app1.dir/all
+.PHONY : app/App1/all
 
 # Recursive "preinstall" directory target.
-calc/preinstall:
-.PHONY : calc/preinstall
+app/App1/preinstall:
+.PHONY : app/App1/preinstall
 
 # Recursive "clean" directory target.
-calc/clean: calc/CMakeFiles/addition.dir/clean
-calc/clean: calc/CMakeFiles/subtract.dir/clean
-.PHONY : calc/clean
+app/App1/clean: app/App1/CMakeFiles/app1.dir/clean
+.PHONY : app/App1/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Demo.dir
+# Directory level rules for directory app/App2
+
+# Recursive "all" directory target.
+app/App2/all: app/App2/CMakeFiles/app2.dir/all
+.PHONY : app/App2/all
+
+# Recursive "preinstall" directory target.
+app/App2/preinstall:
+.PHONY : app/App2/preinstall
+
+# Recursive "clean" directory target.
+app/App2/clean: app/App2/CMakeFiles/app2.dir/clean
+.PHONY : app/App2/clean
+
+#=============================================================================
+# Directory level rules for directory platform
+
+# Recursive "all" directory target.
+platform/all: platform/dio/all
+platform/all: platform/port/all
+.PHONY : platform/all
+
+# Recursive "preinstall" directory target.
+platform/preinstall: platform/dio/preinstall
+platform/preinstall: platform/port/preinstall
+.PHONY : platform/preinstall
+
+# Recursive "clean" directory target.
+platform/clean: platform/dio/clean
+platform/clean: platform/port/clean
+.PHONY : platform/clean
+
+#=============================================================================
+# Directory level rules for directory platform/dio
+
+# Recursive "all" directory target.
+platform/dio/all: platform/dio/CMakeFiles/dio.dir/all
+.PHONY : platform/dio/all
+
+# Recursive "preinstall" directory target.
+platform/dio/preinstall:
+.PHONY : platform/dio/preinstall
+
+# Recursive "clean" directory target.
+platform/dio/clean: platform/dio/CMakeFiles/dio.dir/clean
+.PHONY : platform/dio/clean
+
+#=============================================================================
+# Directory level rules for directory platform/port
+
+# Recursive "all" directory target.
+platform/port/all: platform/port/CMakeFiles/port.dir/all
+.PHONY : platform/port/all
+
+# Recursive "preinstall" directory target.
+platform/port/preinstall:
+.PHONY : platform/port/preinstall
+
+# Recursive "clean" directory target.
+platform/port/clean: platform/port/CMakeFiles/port.dir/clean
+.PHONY : platform/port/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/Demo.dir/all: calc/CMakeFiles/addition.dir/all
-CMakeFiles/Demo.dir/all: calc/CMakeFiles/subtract.dir/all
-CMakeFiles/Demo.dir/all: app/CMakeFiles/applib.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=1,2 "Built target Demo"
-.PHONY : CMakeFiles/Demo.dir/all
+CMakeFiles/main.dir/all: platform/dio/CMakeFiles/dio.dir/all
+CMakeFiles/main.dir/all: platform/port/CMakeFiles/port.dir/all
+CMakeFiles/main.dir/all: app/App1/CMakeFiles/app1.dir/all
+CMakeFiles/main.dir/all: app/App2/CMakeFiles/app2.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=9,10 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Demo.dir/all
+CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 0
-.PHONY : CMakeFiles/Demo.dir/rule
+.PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.
-Demo: CMakeFiles/Demo.dir/rule
-.PHONY : Demo
+main: CMakeFiles/main.dir/rule
+.PHONY : main
 
 # clean rule for target.
-CMakeFiles/Demo.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/clean
-.PHONY : CMakeFiles/Demo.dir/clean
+CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
-# Target rules for target calc/CMakeFiles/addition.dir
+# Target rules for target app/App1/CMakeFiles/app1.dir
 
 # All Build rule for target.
-calc/CMakeFiles/addition.dir/all:
-	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/depend
-	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=3,4 "Built target addition"
-.PHONY : calc/CMakeFiles/addition.dir/all
+app/App1/CMakeFiles/app1.dir/all:
+	$(MAKE) $(MAKESILENT) -f app\App1\CMakeFiles\app1.dir\build.make app/App1/CMakeFiles/app1.dir/depend
+	$(MAKE) $(MAKESILENT) -f app\App1\CMakeFiles\app1.dir\build.make app/App1/CMakeFiles/app1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=1,2,3 "Built target app1"
+.PHONY : app/App1/CMakeFiles/app1.dir/all
 
 # Build rule for subdir invocation for target.
-calc/CMakeFiles/addition.dir/rule: cmake_check_build_system
+app/App1/CMakeFiles/app1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app/App1/CMakeFiles/app1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 0
+.PHONY : app/App1/CMakeFiles/app1.dir/rule
+
+# Convenience name for target.
+app1: app/App1/CMakeFiles/app1.dir/rule
+.PHONY : app1
+
+# clean rule for target.
+app/App1/CMakeFiles/app1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app\App1\CMakeFiles\app1.dir\build.make app/App1/CMakeFiles/app1.dir/clean
+.PHONY : app/App1/CMakeFiles/app1.dir/clean
+
+#=============================================================================
+# Target rules for target app/App2/CMakeFiles/app2.dir
+
+# All Build rule for target.
+app/App2/CMakeFiles/app2.dir/all:
+	$(MAKE) $(MAKESILENT) -f app\App2\CMakeFiles\app2.dir\build.make app/App2/CMakeFiles/app2.dir/depend
+	$(MAKE) $(MAKESILENT) -f app\App2\CMakeFiles\app2.dir\build.make app/App2/CMakeFiles/app2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=4,5,6 "Built target app2"
+.PHONY : app/App2/CMakeFiles/app2.dir/all
+
+# Build rule for subdir invocation for target.
+app/App2/CMakeFiles/app2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app/App2/CMakeFiles/app2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 0
+.PHONY : app/App2/CMakeFiles/app2.dir/rule
+
+# Convenience name for target.
+app2: app/App2/CMakeFiles/app2.dir/rule
+.PHONY : app2
+
+# clean rule for target.
+app/App2/CMakeFiles/app2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app\App2\CMakeFiles\app2.dir\build.make app/App2/CMakeFiles/app2.dir/clean
+.PHONY : app/App2/CMakeFiles/app2.dir/clean
+
+#=============================================================================
+# Target rules for target platform/dio/CMakeFiles/dio.dir
+
+# All Build rule for target.
+platform/dio/CMakeFiles/dio.dir/all: platform/port/CMakeFiles/port.dir/all
+	$(MAKE) $(MAKESILENT) -f platform\dio\CMakeFiles\dio.dir\build.make platform/dio/CMakeFiles/dio.dir/depend
+	$(MAKE) $(MAKESILENT) -f platform\dio\CMakeFiles\dio.dir\build.make platform/dio/CMakeFiles/dio.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=7,8 "Built target dio"
+.PHONY : platform/dio/CMakeFiles/dio.dir/all
+
+# Build rule for subdir invocation for target.
+platform/dio/CMakeFiles/dio.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 platform/dio/CMakeFiles/dio.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 0
+.PHONY : platform/dio/CMakeFiles/dio.dir/rule
+
+# Convenience name for target.
+dio: platform/dio/CMakeFiles/dio.dir/rule
+.PHONY : dio
+
+# clean rule for target.
+platform/dio/CMakeFiles/dio.dir/clean:
+	$(MAKE) $(MAKESILENT) -f platform\dio\CMakeFiles\dio.dir\build.make platform/dio/CMakeFiles/dio.dir/clean
+.PHONY : platform/dio/CMakeFiles/dio.dir/clean
+
+#=============================================================================
+# Target rules for target platform/port/CMakeFiles/port.dir
+
+# All Build rule for target.
+platform/port/CMakeFiles/port.dir/all:
+	$(MAKE) $(MAKESILENT) -f platform\port\CMakeFiles\port.dir\build.make platform/port/CMakeFiles/port.dir/depend
+	$(MAKE) $(MAKESILENT) -f platform\port\CMakeFiles\port.dir\build.make platform/port/CMakeFiles/port.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=11,12 "Built target port"
+.PHONY : platform/port/CMakeFiles/port.dir/all
+
+# Build rule for subdir invocation for target.
+platform/port/CMakeFiles/port.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 calc/CMakeFiles/addition.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 platform/port/CMakeFiles/port.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 0
-.PHONY : calc/CMakeFiles/addition.dir/rule
+.PHONY : platform/port/CMakeFiles/port.dir/rule
 
 # Convenience name for target.
-addition: calc/CMakeFiles/addition.dir/rule
-.PHONY : addition
+port: platform/port/CMakeFiles/port.dir/rule
+.PHONY : port
 
 # clean rule for target.
-calc/CMakeFiles/addition.dir/clean:
-	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/clean
-.PHONY : calc/CMakeFiles/addition.dir/clean
-
-#=============================================================================
-# Target rules for target calc/CMakeFiles/subtract.dir
-
-# All Build rule for target.
-calc/CMakeFiles/subtract.dir/all:
-	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/depend
-	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=7,8 "Built target subtract"
-.PHONY : calc/CMakeFiles/subtract.dir/all
-
-# Build rule for subdir invocation for target.
-calc/CMakeFiles/subtract.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 calc/CMakeFiles/subtract.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 0
-.PHONY : calc/CMakeFiles/subtract.dir/rule
-
-# Convenience name for target.
-subtract: calc/CMakeFiles/subtract.dir/rule
-.PHONY : subtract
-
-# clean rule for target.
-calc/CMakeFiles/subtract.dir/clean:
-	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/clean
-.PHONY : calc/CMakeFiles/subtract.dir/clean
-
-#=============================================================================
-# Target rules for target app/CMakeFiles/applib.dir
-
-# All Build rule for target.
-app/CMakeFiles/applib.dir/all:
-	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\applib.dir\build.make app/CMakeFiles/applib.dir/depend
-	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\applib.dir\build.make app/CMakeFiles/applib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=5,6 "Built target applib"
-.PHONY : app/CMakeFiles/applib.dir/all
-
-# Build rule for subdir invocation for target.
-app/CMakeFiles/applib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app/CMakeFiles/applib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles 0
-.PHONY : app/CMakeFiles/applib.dir/rule
-
-# Convenience name for target.
-applib: app/CMakeFiles/applib.dir/rule
-.PHONY : applib
-
-# clean rule for target.
-app/CMakeFiles/applib.dir/clean:
-	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\applib.dir\build.make app/CMakeFiles/applib.dir/clean
-.PHONY : app/CMakeFiles/applib.dir/clean
+platform/port/CMakeFiles/port.dir/clean:
+	$(MAKE) $(MAKESILENT) -f platform\port\CMakeFiles\port.dir\build.make platform/port/CMakeFiles/port.dir/clean
+.PHONY : platform/port/CMakeFiles/port.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

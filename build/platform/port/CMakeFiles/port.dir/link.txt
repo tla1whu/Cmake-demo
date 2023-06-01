@@ -1,0 +1,2 @@
+C:\tool\mingw64\bin\ar.exe qc libport.a CMakeFiles/port.dir/port.c.obj
+C:\tool\mingw64\bin\ranlib.exe libport.a

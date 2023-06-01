@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8)
+
+add_library(app1 STATIC 
+    app.c
+    app_test.c
+    app.h
+)
+
+
+target_include_directories(app1 PUBLIC
+    ../../platform/common
+)
+

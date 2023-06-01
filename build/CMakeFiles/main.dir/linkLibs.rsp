@@ -1,0 +1,1 @@
+ app/App1/libapp1.a app/App2/libapp2.a platform/dio/libdio.a platform/port/libport.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

@@ -27,6 +27,9 @@ CMAKE_BUILD_TYPE:STRING=
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
+//CXX compiler
+CMAKE_CXX_COMPILER:FILEPATH=C:/tool/mingw64/bin/c++.exe
+
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
 CMAKE_CXX_COMPILER_AR:FILEPATH=C:/tool/mingw64/bin/gcc-ar.exe
@@ -52,6 +55,9 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Libraries linked by default with all C++ applications.
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+
+//C compiler
+CMAKE_C_COMPILER:FILEPATH=C:/tool/mingw64/bin/gcc.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -104,7 +110,7 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=D:/01_Project/02_cmake_demo/Cmake-demo/b
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Demo
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/main
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/tool/mingw64/bin/ld.exe
@@ -148,22 +154,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Demo
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=1.0
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=0
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_TWEAK:STATIC=
+CMAKE_PROJECT_NAME:STATIC=main
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/tool/mingw64/bin/ranlib.exe
@@ -245,17 +236,17 @@ CMAKE_STRIP:FILEPATH=C:/tool/mingw64/bin/strip.exe
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//output date
-DATE_ENABLE:BOOL=ON
+//Dependencies for the target
+dio_LIB_DEPENDS:STATIC=general;port;
 
 //Value Computed by CMake
-Demo_BINARY_DIR:STATIC=D:/01_Project/02_cmake_demo/Cmake-demo/build
+main_BINARY_DIR:STATIC=D:/01_Project/02_cmake_demo/Cmake-demo/build
 
 //Value Computed by CMake
-Demo_IS_TOP_LEVEL:STATIC=ON
+main_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-Demo_SOURCE_DIR:STATIC=D:/01_Project/02_cmake_demo/Cmake-demo/src
+main_SOURCE_DIR:STATIC=D:/01_Project/02_cmake_demo/Cmake-demo/src
 
 
 ########################
@@ -282,6 +273,8 @@ CMAKE_COMMAND:INTERNAL=C:/tool/cmake/bin/cmake.exe
 CMAKE_CPACK_COMMAND:INTERNAL=C:/tool/cmake/bin/cpack.exe
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=C:/tool/cmake/bin/ctest.exe
+//ADVANCED property for variable: CMAKE_CXX_COMPILER
+CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
 CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
@@ -298,6 +291,8 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_STANDARD_LIBRARIES
 CMAKE_CXX_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER
+CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
 CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
@@ -360,7 +355,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -116,63 +116,76 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Demo
+# Target rules for targets named main
 
 # Build rule for target.
-Demo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Demo
-.PHONY : Demo
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-Demo/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/build
-.PHONY : Demo/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named addition
+# Target rules for targets named app1
 
 # Build rule for target.
-addition: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 addition
-.PHONY : addition
+app1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app1
+.PHONY : app1
 
 # fast build rule for target.
-addition/fast:
-	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/build
-.PHONY : addition/fast
+app1/fast:
+	$(MAKE) $(MAKESILENT) -f app\App1\CMakeFiles\app1.dir\build.make app/App1/CMakeFiles/app1.dir/build
+.PHONY : app1/fast
 
 #=============================================================================
-# Target rules for targets named subtract
+# Target rules for targets named app2
 
 # Build rule for target.
-subtract: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 subtract
-.PHONY : subtract
+app2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app2
+.PHONY : app2
 
 # fast build rule for target.
-subtract/fast:
-	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/build
-.PHONY : subtract/fast
+app2/fast:
+	$(MAKE) $(MAKESILENT) -f app\App2\CMakeFiles\app2.dir\build.make app/App2/CMakeFiles/app2.dir/build
+.PHONY : app2/fast
 
 #=============================================================================
-# Target rules for targets named applib
+# Target rules for targets named dio
 
 # Build rule for target.
-applib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 applib
-.PHONY : applib
+dio: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 dio
+.PHONY : dio
 
 # fast build rule for target.
-applib/fast:
-	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\applib.dir\build.make app/CMakeFiles/applib.dir/build
-.PHONY : applib/fast
+dio/fast:
+	$(MAKE) $(MAKESILENT) -f platform\dio\CMakeFiles\dio.dir\build.make platform/dio/CMakeFiles/dio.dir/build
+.PHONY : dio/fast
+
+#=============================================================================
+# Target rules for targets named port
+
+# Build rule for target.
+port: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 port
+.PHONY : port
+
+# fast build rule for target.
+port/fast:
+	$(MAKE) $(MAKESILENT) -f platform\port\CMakeFiles\port.dir\build.make platform/port/CMakeFiles/port.dir/build
+.PHONY : port/fast
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -180,7 +193,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -188,7 +201,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -199,10 +212,11 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Demo
-	@echo ... addition
-	@echo ... applib
-	@echo ... subtract
+	@echo ... app1
+	@echo ... app2
+	@echo ... dio
+	@echo ... main
+	@echo ... port
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

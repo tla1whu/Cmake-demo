@@ -115,44 +115,6 @@ depend:
 	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-app/CMakeFiles/applib.dir/rule:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app/CMakeFiles/applib.dir/rule
-.PHONY : app/CMakeFiles/applib.dir/rule
-
-# Convenience name for target.
-applib: app/CMakeFiles/applib.dir/rule
-.PHONY : applib
-
-# fast build rule for target.
-applib/fast:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\applib.dir\build.make app/CMakeFiles/applib.dir/build
-.PHONY : applib/fast
-
-app.obj: app.c.obj
-.PHONY : app.obj
-
-# target to build an object file
-app.c.obj:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\applib.dir\build.make app/CMakeFiles/applib.dir/app.c.obj
-.PHONY : app.c.obj
-
-app.i: app.c.i
-.PHONY : app.i
-
-# target to preprocess a source file
-app.c.i:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\applib.dir\build.make app/CMakeFiles/applib.dir/app.c.i
-.PHONY : app.c.i
-
-app.s: app.c.s
-.PHONY : app.s
-
-# target to generate assembly for a file
-app.c.s:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\applib.dir\build.make app/CMakeFiles/applib.dir/app.c.s
-.PHONY : app.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,10 +123,6 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... applib
-	@echo ... app.obj
-	@echo ... app.i
-	@echo ... app.s
 .PHONY : help
 
 
