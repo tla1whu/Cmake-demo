@@ -68,31 +68,31 @@ include calc/CMakeFiles/addition.dir/progress.make
 # Include the compile flags for this target's objects.
 include calc/CMakeFiles/addition.dir/flags.make
 
-calc/CMakeFiles/addition.dir/addition.cpp.obj: calc/CMakeFiles/addition.dir/flags.make
-calc/CMakeFiles/addition.dir/addition.cpp.obj: D:/01_Project/02_cmake_demo/Cmake-demo/src/calc/addition.cpp
-calc/CMakeFiles/addition.dir/addition.cpp.obj: calc/CMakeFiles/addition.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object calc/CMakeFiles/addition.dir/addition.cpp.obj"
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT calc/CMakeFiles/addition.dir/addition.cpp.obj -MF CMakeFiles\addition.dir\addition.cpp.obj.d -o CMakeFiles\addition.dir\addition.cpp.obj -c D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\addition.cpp
+calc/CMakeFiles/addition.dir/addition.c.obj: calc/CMakeFiles/addition.dir/flags.make
+calc/CMakeFiles/addition.dir/addition.c.obj: D:/01_Project/02_cmake_demo/Cmake-demo/src/calc/addition.c
+calc/CMakeFiles/addition.dir/addition.c.obj: calc/CMakeFiles/addition.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object calc/CMakeFiles/addition.dir/addition.c.obj"
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT calc/CMakeFiles/addition.dir/addition.c.obj -MF CMakeFiles\addition.dir\addition.c.obj.d -o CMakeFiles\addition.dir\addition.c.obj -c D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\addition.c
 
-calc/CMakeFiles/addition.dir/addition.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/addition.dir/addition.cpp.i"
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\addition.cpp > CMakeFiles\addition.dir\addition.cpp.i
+calc/CMakeFiles/addition.dir/addition.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/addition.dir/addition.c.i"
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\addition.c > CMakeFiles\addition.dir\addition.c.i
 
-calc/CMakeFiles/addition.dir/addition.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/addition.dir/addition.cpp.s"
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\addition.cpp -o CMakeFiles\addition.dir\addition.cpp.s
+calc/CMakeFiles/addition.dir/addition.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/addition.dir/addition.c.s"
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\addition.c -o CMakeFiles\addition.dir\addition.c.s
 
 # Object files for target addition
 addition_OBJECTS = \
-"CMakeFiles/addition.dir/addition.cpp.obj"
+"CMakeFiles/addition.dir/addition.c.obj"
 
 # External object files for target addition
 addition_EXTERNAL_OBJECTS =
 
-lib/libaddition.a: calc/CMakeFiles/addition.dir/addition.cpp.obj
+lib/libaddition.a: calc/CMakeFiles/addition.dir/addition.c.obj
 lib/libaddition.a: calc/CMakeFiles/addition.dir/build.make
 lib/libaddition.a: calc/CMakeFiles/addition.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ..\lib\libaddition.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library ..\lib\libaddition.a"
 	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && $(CMAKE_COMMAND) -P CMakeFiles\addition.dir\cmake_clean_target.cmake
 	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\addition.dir\link.txt --verbose=$(VERBOSE)
 

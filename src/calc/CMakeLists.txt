@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.24)
 
-add_library(addition STATIC addition.cpp)
-add_library(subtract SHARED subtract.cpp)
+add_library(addition STATIC addition.c)
+add_library(subtract STATIC subtract.c)
 

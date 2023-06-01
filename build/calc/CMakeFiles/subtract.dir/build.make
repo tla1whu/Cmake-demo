@@ -68,37 +68,36 @@ include calc/CMakeFiles/subtract.dir/progress.make
 # Include the compile flags for this target's objects.
 include calc/CMakeFiles/subtract.dir/flags.make
 
-calc/CMakeFiles/subtract.dir/subtract.cpp.obj: calc/CMakeFiles/subtract.dir/flags.make
-calc/CMakeFiles/subtract.dir/subtract.cpp.obj: D:/01_Project/02_cmake_demo/Cmake-demo/src/calc/subtract.cpp
-calc/CMakeFiles/subtract.dir/subtract.cpp.obj: calc/CMakeFiles/subtract.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object calc/CMakeFiles/subtract.dir/subtract.cpp.obj"
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT calc/CMakeFiles/subtract.dir/subtract.cpp.obj -MF CMakeFiles\subtract.dir\subtract.cpp.obj.d -o CMakeFiles\subtract.dir\subtract.cpp.obj -c D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\subtract.cpp
+calc/CMakeFiles/subtract.dir/subtract.c.obj: calc/CMakeFiles/subtract.dir/flags.make
+calc/CMakeFiles/subtract.dir/subtract.c.obj: D:/01_Project/02_cmake_demo/Cmake-demo/src/calc/subtract.c
+calc/CMakeFiles/subtract.dir/subtract.c.obj: calc/CMakeFiles/subtract.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object calc/CMakeFiles/subtract.dir/subtract.c.obj"
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT calc/CMakeFiles/subtract.dir/subtract.c.obj -MF CMakeFiles\subtract.dir\subtract.c.obj.d -o CMakeFiles\subtract.dir\subtract.c.obj -c D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\subtract.c
 
-calc/CMakeFiles/subtract.dir/subtract.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/subtract.dir/subtract.cpp.i"
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\subtract.cpp > CMakeFiles\subtract.dir\subtract.cpp.i
+calc/CMakeFiles/subtract.dir/subtract.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/subtract.dir/subtract.c.i"
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\subtract.c > CMakeFiles\subtract.dir\subtract.c.i
 
-calc/CMakeFiles/subtract.dir/subtract.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/subtract.dir/subtract.cpp.s"
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\subtract.cpp -o CMakeFiles\subtract.dir\subtract.cpp.s
+calc/CMakeFiles/subtract.dir/subtract.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/subtract.dir/subtract.c.s"
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && C:\tool\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\01_Project\02_cmake_demo\Cmake-demo\src\calc\subtract.c -o CMakeFiles\subtract.dir\subtract.c.s
 
 # Object files for target subtract
 subtract_OBJECTS = \
-"CMakeFiles/subtract.dir/subtract.cpp.obj"
+"CMakeFiles/subtract.dir/subtract.c.obj"
 
 # External object files for target subtract
 subtract_EXTERNAL_OBJECTS =
 
-bin/libsubtract.dll: calc/CMakeFiles/subtract.dir/subtract.cpp.obj
-bin/libsubtract.dll: calc/CMakeFiles/subtract.dir/build.make
-bin/libsubtract.dll: calc/CMakeFiles/subtract.dir/linkLibs.rsp
-bin/libsubtract.dll: calc/CMakeFiles/subtract.dir/objects1
-bin/libsubtract.dll: calc/CMakeFiles/subtract.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ..\bin\libsubtract.dll"
+lib/libsubtract.a: calc/CMakeFiles/subtract.dir/subtract.c.obj
+lib/libsubtract.a: calc/CMakeFiles/subtract.dir/build.make
+lib/libsubtract.a: calc/CMakeFiles/subtract.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\01_Project\02_cmake_demo\Cmake-demo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library ..\lib\libsubtract.a"
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && $(CMAKE_COMMAND) -P CMakeFiles\subtract.dir\cmake_clean_target.cmake
 	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build\calc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\subtract.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-calc/CMakeFiles/subtract.dir/build: bin/libsubtract.dll
+calc/CMakeFiles/subtract.dir/build: lib/libsubtract.a
 .PHONY : calc/CMakeFiles/subtract.dir/build
 
 calc/CMakeFiles/subtract.dir/clean:

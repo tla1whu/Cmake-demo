@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/01_Project/02_cmake_demo/Cmake-demo/src/calc/subtract.cpp" "calc/CMakeFiles/subtract.dir/subtract.cpp.obj" "gcc" "calc/CMakeFiles/subtract.dir/subtract.cpp.obj.d"
+  "D:/01_Project/02_cmake_demo/Cmake-demo/src/calc/subtract.c" "calc/CMakeFiles/subtract.dir/subtract.c.obj" "gcc" "calc/CMakeFiles/subtract.dir/subtract.c.obj.d"
   )
 
 # Targets to which this target links.

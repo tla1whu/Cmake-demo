@@ -143,53 +143,53 @@ subtract/fast:
 	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/build
 .PHONY : subtract/fast
 
-addition.obj: addition.cpp.obj
+addition.obj: addition.c.obj
 .PHONY : addition.obj
 
 # target to build an object file
-addition.cpp.obj:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/addition.cpp.obj
-.PHONY : addition.cpp.obj
+addition.c.obj:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/addition.c.obj
+.PHONY : addition.c.obj
 
-addition.i: addition.cpp.i
+addition.i: addition.c.i
 .PHONY : addition.i
 
 # target to preprocess a source file
-addition.cpp.i:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/addition.cpp.i
-.PHONY : addition.cpp.i
+addition.c.i:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/addition.c.i
+.PHONY : addition.c.i
 
-addition.s: addition.cpp.s
+addition.s: addition.c.s
 .PHONY : addition.s
 
 # target to generate assembly for a file
-addition.cpp.s:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/addition.cpp.s
-.PHONY : addition.cpp.s
+addition.c.s:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\addition.dir\build.make calc/CMakeFiles/addition.dir/addition.c.s
+.PHONY : addition.c.s
 
-subtract.obj: subtract.cpp.obj
+subtract.obj: subtract.c.obj
 .PHONY : subtract.obj
 
 # target to build an object file
-subtract.cpp.obj:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/subtract.cpp.obj
-.PHONY : subtract.cpp.obj
+subtract.c.obj:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/subtract.c.obj
+.PHONY : subtract.c.obj
 
-subtract.i: subtract.cpp.i
+subtract.i: subtract.c.i
 .PHONY : subtract.i
 
 # target to preprocess a source file
-subtract.cpp.i:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/subtract.cpp.i
-.PHONY : subtract.cpp.i
+subtract.c.i:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/subtract.c.i
+.PHONY : subtract.c.i
 
-subtract.s: subtract.cpp.s
+subtract.s: subtract.c.s
 .PHONY : subtract.s
 
 # target to generate assembly for a file
-subtract.cpp.s:
-	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/subtract.cpp.s
-.PHONY : subtract.cpp.s
+subtract.c.s:
+	cd /d D:\01_Project\02_cmake_demo\Cmake-demo\build && $(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/subtract.c.s
+.PHONY : subtract.c.s
 
 # Help Target
 help:

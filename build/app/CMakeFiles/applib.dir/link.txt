@@ -1,0 +1,2 @@
+C:\tool\mingw64\bin\ar.exe qc ..\lib\libapplib.a CMakeFiles/applib.dir/app.c.obj
+C:\tool\mingw64\bin\ranlib.exe ..\lib\libapplib.a

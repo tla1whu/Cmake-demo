@@ -154,29 +154,42 @@ subtract/fast:
 	$(MAKE) $(MAKESILENT) -f calc\CMakeFiles\subtract.dir\build.make calc/CMakeFiles/subtract.dir/build
 .PHONY : subtract/fast
 
-main.obj: main.cpp.obj
+#=============================================================================
+# Target rules for targets named applib
+
+# Build rule for target.
+applib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 applib
+.PHONY : applib
+
+# fast build rule for target.
+applib/fast:
+	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\applib.dir\build.make app/CMakeFiles/applib.dir/build
+.PHONY : applib/fast
+
+main.obj: main.c.obj
 .PHONY : main.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/main.c.obj
+.PHONY : main.c.obj
 
-main.i: main.cpp.i
+main.i: main.c.i
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/main.cpp.i
-.PHONY : main.cpp.i
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/main.c.i
+.PHONY : main.c.i
 
-main.s: main.cpp.s
+main.s: main.c.s
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Demo.dir\build.make CMakeFiles/Demo.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -188,6 +201,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Demo
 	@echo ... addition
+	@echo ... applib
 	@echo ... subtract
 	@echo ... main.obj
 	@echo ... main.i

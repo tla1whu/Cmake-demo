@@ -1,3 +1,2 @@
-C:\tool\cmake\bin\cmake.exe -E rm -f CMakeFiles\subtract.dir/objects.a
-C:\tool\mingw64\bin\ar.exe qc CMakeFiles\subtract.dir/objects.a @CMakeFiles\subtract.dir\objects1
-C:\tool\mingw64\bin\g++.exe -shared -o ..\bin\libsubtract.dll -Wl,--out-implib,..\lib\libsubtract.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\subtract.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\subtract.dir\linkLibs.rsp
+C:\tool\mingw64\bin\ar.exe qc ..\lib\libsubtract.a CMakeFiles/subtract.dir/subtract.c.obj
+C:\tool\mingw64\bin\ranlib.exe ..\lib\libsubtract.a
